@@ -1,8 +1,8 @@
-# PlemolSC (プレモル ジェイピー)
+# PlemolSC (プレモル エスシー)
 
-***Ple***x ***Mo***no ***L***anguage ***JP***
+***Ple***x ***Mo***no ***L***anguage ***SC***
 
-IBM Plex Mono と IBM Plex Sans SC を合成した日本語プログラミングフォント PlemolSC (プレモル ジェイピー)
+IBM Plex Mono と IBM Plex Sans SC を合成した日本語プログラミングフォント PlemolSC (プレモル エスシー)
 
 **ダウンロードはこちら ➡ [Releases](https://github.com/yuru7/PlemolSC/releases/latest)**
 
