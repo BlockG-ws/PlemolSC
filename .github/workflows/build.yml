@@ -1,0 +1,60 @@
+name: Build PlemolSC Fonts
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.x'
+
+    - name: Install dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y fontforge python3-fontforge unzip curl
+        pip install fonttools
+
+    - name: Download source fonts
+      run: |
+        chmod +x download_fonts.sh
+        ./download_fonts.sh
+
+    - name: Build fonts
+      run: |
+        build_font() {
+            local opts="$1"
+            local prefix="$2"
+            echo "Building with opts: $opts"
+            # fontforge python is available when using `python3-fontforge`
+            fontforge -lang=py -script fontforge_script.py --do-not-delete-build-dir $opts
+            python3 fonttools_script.py "$prefix"
+        }
+        
+        # Parallel build takes too much memory? Let's build a few sequentially.
+        build_font "" "-"
+        build_font "--35" "35-"
+        build_font "--console" "Console-"
+        build_font "--console --35" "35Console-"
+        build_font "--hidden-zenkaku-space" "HS-"
+        build_font "--hidden-zenkaku-space --35" "35HS-"
+        build_font "--hidden-zenkaku-space --console" "ConsoleHS-"
+        build_font "--hidden-zenkaku-space --console --35" "35ConsoleHS-"
+        build_font "--console --nerd-font" "ConsoleNF-"
+        build_font "--console --35 --nerd-font" "35ConsoleNF-"
+
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: PlemolSC-Fonts
+        path: build/

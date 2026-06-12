@@ -4,7 +4,7 @@ BASE_DIR="$(cd $(dirname $0); pwd)"
 
 PREFIX="$1"
 
-FONT_PATTERN=${PREFIX}'PlemolJP*.ttf'
+FONT_PATTERN=${PREFIX}'PlemolSC*.ttf'
 
 COPYRIGHT='[IBM Plex]
 Copyright © 2017 IBM Corp.
@@ -12,7 +12,7 @@ Copyright © 2017 IBM Corp.
 [Nerd Fonts]
 Copyright (c) 2014, Ryan L McIntyre (https://ryanlmcintyre.com).
 
-[PlemolJP]
+[PlemolSC]
 Copyright (c) 2021, Yuko Otawara'
 
 for P in ${BASE_DIR}/${FONT_PATTERN}

@@ -31,9 +31,9 @@ $option_and_output_folder | Foreach-Object -ThrottleLimit 4 -Parallel {
 }
 
 $move_file_src_dest = @(
-    @("PlemolJP*NF*-*.ttf", "PlemolJP_NF_$version", "NF"),
-    @("PlemolJP*HS*-*.ttf", "PlemolJP_HS_$version", "HS"),
-    @("PlemolJP*-*.ttf", "PlemolJP_$version", "")
+    @("PlemolSC*NF*-*.ttf", "PlemolSC_NF_$version", "NF"),
+    @("PlemolSC*HS*-*.ttf", "PlemolSC_HS_$version", "HS"),
+    @("PlemolSC*-*.ttf", "PlemolSC_$version", "")
 )
 
 $timestamp = Get-Date -Format "yyyyMMddHHmmss"
@@ -49,10 +49,10 @@ $move_file_src_dest | Foreach-Object {
         $variant = "_$($_[2])"
     }
     @(
-        @("*35Console*.ttf", "PlemolJP35Console$($variant)"),
-        @("*Console*.ttf", "PlemolJPConsole$($variant)"),
-        @("*35*.ttf", "PlemolJP35$($variant)"),
-        @("*.ttf", "PlemolJP$($variant)")
+        @("*35Console*.ttf", "PlemolSC35Console$($variant)"),
+        @("*Console*.ttf", "PlemolSCConsole$($variant)"),
+        @("*35*.ttf", "PlemolSC35$($variant)"),
+        @("*.ttf", "PlemolSC$($variant)")
     ) | Foreach-Object {
         $individual_folder_path = "$folder_path\$($_[1])"
         # ファイル件数が0件の場合はフォルダを作成しない
