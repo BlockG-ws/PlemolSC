@@ -1,29 +1,29 @@
-# PlemolJP (プレモル ジェイピー)
+# PlemolSC (プレモル エスシー)
 
-***Ple***x ***Mo***no ***L***anguage ***JP***
+***Ple***x ***Mo***no ***L***anguage ***SC***
 
-IBM Plex Mono と IBM Plex Sans JP を合成した日本語プログラミングフォント PlemolJP (プレモル ジェイピー)
+IBM Plex Mono と IBM Plex Sans SC を合成した日本語プログラミングフォント PlemolSC (プレモル エスシー)
 
-**ダウンロードはこちら ➡ [Releases](https://github.com/yuru7/PlemolJP/releases/latest)**
+**ダウンロードはこちら ➡ [Releases](https://github.com/yuru7/PlemolSC/releases/latest)**
 
 > 💡 [Homebrew (Mac) でのインストール方法](doc/install_via_homebrew.md)
 
-![image](https://github.com/yuru7/PlemolJP/raw/images/beer.jpg)
+![image](https://github.com/yuru7/PlemolSC/raw/images/beer.jpg)
 
-PlemolJP では合成元の [IBM Plex Mono](https://github.com/IBM/plex) シリーズと同様に、ノーマル・イタリックの両スタイルに対応しました。また、各スタイルごとに8種のウェイト (Thin~Bold) をご用意しています。  
+PlemolSC では合成元の [IBM Plex Mono](https://github.com/IBM/plex) シリーズと同様に、ノーマル・イタリックの両スタイルに対応しました。また、各スタイルごとに8種のウェイト (Thin~Bold) をご用意しています。  
 
 さらに日本語環境でのプログラミングでつまずきがちな全角スペースの誤入力に気づけるよう、全角スペースを可視化する修正を加えています。  
 
-> 💡 全角スペースの可視化が不要な場合は、リリースの Assets より `PlemolJP_HS_vx.x.x.zip` の名前形式になっている zip ファイルを選択してください。(HS: Hidden Space)
+> 💡 全角スペースの可視化が不要な場合は、リリースの Assets より `PlemolSC_HS_vx.x.x.zip` の名前形式になっている zip ファイルを選択してください。(HS: Hidden Space)
 
-> 💡 Powerline 記号等が含まれる Nerd Fonts 対応版は、リリースの Assets より `PlemolJP_NF_vx.x.x.zip` の名前形式になっている zip ファイルを選択してください。(NF: Nerd Fonts)
+> 💡 Powerline 記号等が含まれる Nerd Fonts 対応版は、リリースの Assets より `PlemolSC_NF_vx.x.x.zip` の名前形式になっている zip ファイルを選択してください。(NF: Nerd Fonts)
 
 |**フォント ファミリー**|**説明**|
 |:------------:|:---|
-|**PlemolJP**|文字幅比率「半角1:全角2」の通常版の PlemolJP。主にASCIIコードの英数字記号に IBM Plex Mono の字体を使い、その他の日本語文字や記号類に IBM Plex Sans JP を使っている。|
-|**PlemolJP Console**|IBM Plex Mono の字体を除外せずに全て適用したフォントファミリー。矢印記号などの多くの記号が半角で表示されるため、コンソールでの利用や記号類は可能な限り半角で表示したい人にオススメ。|
-|**PlemolJP35**|通常版の PlemolJP の文字幅比率を「半角3:全角5」にしたフォントファミリー。英数字が通常版の PlemolJP よりも大きく表示される。日本語が少ない文書やコードの場合にはこちらの方が読みやすいと感じるかもしれない。|
-|**PlemolJP35 Console**|PlemolJP Console の文字幅比率を 半角3:全角5 にしたフォントファミリー|
+|**PlemolSC**|文字幅比率「半角1:全角2」の通常版の PlemolSC。主にASCIIコードの英数字記号に IBM Plex Mono の字体を使い、その他の日本語文字や記号類に IBM Plex Sans SC を使っている。|
+|**PlemolSC Console**|IBM Plex Mono の字体を除外せずに全て適用したフォントファミリー。矢印記号などの多くの記号が半角で表示されるため、コンソールでの利用や記号類は可能な限り半角で表示したい人にオススメ。|
+|**PlemolSC35**|通常版の PlemolSC の文字幅比率を「半角3:全角5」にしたフォントファミリー。英数字が通常版の PlemolSC よりも大きく表示される。日本語が少ない文書やコードの場合にはこちらの方が読みやすいと感じるかもしれない。|
+|**PlemolSC35 Console**|PlemolSC Console の文字幅比率を 半角3:全角5 にしたフォントファミリー|
 
 > 💡 その他、公開中のプログラミングフォント
 > - 日本語文字に源柔ゴシック、英数字部分に Hack を使った [**白源 (はくげん／HackGen)**](https://github.com/yuru7/HackGen)

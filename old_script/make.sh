@@ -5,33 +5,33 @@ plemoljp_version="1.7.1"
 BASE_DIR=$(cd $(dirname $0); pwd)
 
 function mvBuild() {
-  mkdir -p "${BASE_DIR}/build/PlemolJP"
-  mkdir -p "${BASE_DIR}/build/PlemolJPConsole"
-  mkdir -p "${BASE_DIR}/build/PlemolJP35"
-  mkdir -p "${BASE_DIR}/build/PlemolJP35Console"
-  mv -f "${BASE_DIR}/"PlemolJP35Console*.ttf "${BASE_DIR}/build/PlemolJP35Console/"
-  mv -f "${BASE_DIR}/"PlemolJP35*.ttf "${BASE_DIR}/build/PlemolJP35/"
-  mv -f "${BASE_DIR}/"PlemolJPConsole*.ttf "${BASE_DIR}/build/PlemolJPConsole/"
-  mv -f "${BASE_DIR}/"PlemolJP*.ttf "${BASE_DIR}/build/PlemolJP/"
+  mkdir -p "${BASE_DIR}/build/PlemolSC"
+  mkdir -p "${BASE_DIR}/build/PlemolSCConsole"
+  mkdir -p "${BASE_DIR}/build/PlemolSC35"
+  mkdir -p "${BASE_DIR}/build/PlemolSC35Console"
+  mv -f "${BASE_DIR}/"PlemolSC35Console*.ttf "${BASE_DIR}/build/PlemolSC35Console/"
+  mv -f "${BASE_DIR}/"PlemolSC35*.ttf "${BASE_DIR}/build/PlemolSC35/"
+  mv -f "${BASE_DIR}/"PlemolSCConsole*.ttf "${BASE_DIR}/build/PlemolSCConsole/"
+  mv -f "${BASE_DIR}/"PlemolSC*.ttf "${BASE_DIR}/build/PlemolSC/"
 }
 
 function mvBuildHS() {
-  mkdir -p "${BASE_DIR}/build/PlemolJP_HS"
-  mkdir -p "${BASE_DIR}/build/PlemolJPConsole_HS"
-  mkdir -p "${BASE_DIR}/build/PlemolJP35_HS"
-  mkdir -p "${BASE_DIR}/build/PlemolJP35Console_HS"
-  mv -f "${BASE_DIR}/"PlemolJP35Console*.ttf "${BASE_DIR}/build/PlemolJP35Console_HS/"
-  mv -f "${BASE_DIR}/"PlemolJP35*.ttf "${BASE_DIR}/build/PlemolJP35_HS/"
-  mv -f "${BASE_DIR}/"PlemolJPConsole*.ttf "${BASE_DIR}/build/PlemolJPConsole_HS/"
-  mv -f "${BASE_DIR}/"PlemolJP*.ttf "${BASE_DIR}/build/PlemolJP_HS/"
+  mkdir -p "${BASE_DIR}/build/PlemolSC_HS"
+  mkdir -p "${BASE_DIR}/build/PlemolSCConsole_HS"
+  mkdir -p "${BASE_DIR}/build/PlemolSC35_HS"
+  mkdir -p "${BASE_DIR}/build/PlemolSC35Console_HS"
+  mv -f "${BASE_DIR}/"PlemolSC35Console*.ttf "${BASE_DIR}/build/PlemolSC35Console_HS/"
+  mv -f "${BASE_DIR}/"PlemolSC35*.ttf "${BASE_DIR}/build/PlemolSC35_HS/"
+  mv -f "${BASE_DIR}/"PlemolSCConsole*.ttf "${BASE_DIR}/build/PlemolSCConsole_HS/"
+  mv -f "${BASE_DIR}/"PlemolSC*.ttf "${BASE_DIR}/build/PlemolSC_HS/"
 }
 
 function mvBuildNF() {
-  mkdir -p "${BASE_DIR}/build/PlemolJPConsole_NF"
-  mkdir -p "${BASE_DIR}/build/PlemolJP35Console_NF"
-  mv -f "${BASE_DIR}/"PlemolJP35Console*.ttf "${BASE_DIR}/build/PlemolJP35Console_NF/"
-  mv -f "${BASE_DIR}/"PlemolJPConsole*.ttf "${BASE_DIR}/build/PlemolJPConsole_NF/"
-  rm -f "${BASE_DIR}/"PlemolJP*.ttf
+  mkdir -p "${BASE_DIR}/build/PlemolSCConsole_NF"
+  mkdir -p "${BASE_DIR}/build/PlemolSC35Console_NF"
+  mv -f "${BASE_DIR}/"PlemolSC35Console*.ttf "${BASE_DIR}/build/PlemolSC35Console_NF/"
+  mv -f "${BASE_DIR}/"PlemolSCConsole*.ttf "${BASE_DIR}/build/PlemolSCConsole_NF/"
+  rm -f "${BASE_DIR}/"PlemolSC*.ttf
 }
 
 DEBUG_FLG='false'

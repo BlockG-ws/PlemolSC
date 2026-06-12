@@ -4,3 +4,8 @@ work/
 error.log
 build/
 release_files/
+source/IBM-Plex-Mono/*.ttf
+source/IBM-Plex-Sans-SC/unhinted/*.ttf
+source/hack/*.ttf
+source/nerd-fonts/*.ttf
+source/*.ttf

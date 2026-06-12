@@ -49,7 +49,7 @@ Copyright 2018 Source Foundry Authors https://github.com/source-foundry/Hack
 [Nerd Fonts]
 Copyright (c) 2014, Ryan L McIntyre https://ryanlmcintyre.com
 
-[PlemolJP]
+[PlemolSC]
 Copyright (c) 2021, Yuko Otawara
 """  # noqa: E501
 
@@ -396,7 +396,7 @@ def adjust_some_glyph(jp_font, eng_font, style="Regular"):
         glyph.transform(psMat.translate((full_width - glyph.width) / 2, -150))
         glyph.width = full_width
 
-    # Cent Sign, Pound Sign, Yen Sign は半角記号に IBM Plex Sans JP を使用
+    # Cent Sign, Pound Sign, Yen Sign は半角記号に IBM Plex Sans SC を使用
     jp_font.selection.select(("unicode", None), 0x00A2)
     jp_font.selection.select(("unicode", "more"), 0x00A3)
     jp_font.selection.select(("unicode", "more"), 0x00A5)
@@ -446,7 +446,7 @@ def delete_duplicate_glyphs(jp_font, eng_font):
     eng_font.selection.none()
     jp_font.selection.none()
 
-    # IBM Plex Sans JP グリフを使用
+    # IBM Plex Sans SC グリフを使用
     eng_font[0x00A2].clear()  # Cent Sign
     eng_font[0x00A3].clear()  # Pound Sign
     eng_font[0x00A5].clear()  # Yen Sign
@@ -593,7 +593,7 @@ def delete_not_console_glyphs(eng_font):
     eng_font.selection.select(("more", "unicode"), 0x203E)
     eng_font.selection.select(("more", "unicode", "ranges"), 0x2113, 0x2122)
     # 矢印
-    # TODO: IBM Plex Sans JP v1.002 へバージョンアップすると矢印が拡張される見込みだが、当該バージョンには一部グリフ欠けがあるためさらに上のバージョンが出てきた際に取り込む
+    # TODO: IBM Plex Sans SC v1.002 へバージョンアップすると矢印が拡張される見込みだが、当該バージョンには一部グリフ欠けがあるためさらに上のバージョンが出てきた際に取り込む
     eng_font.selection.select(("more", "unicode", "ranges"), 0x2190, 0x2193)
     eng_font.selection.select(("more", "unicode", "ranges"), 0x21C4, 0x21C6)
     eng_font.selection.select(("more", "unicode"), 0x21D2)

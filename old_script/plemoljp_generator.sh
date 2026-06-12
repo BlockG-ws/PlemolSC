@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# PlemolJP Generator
+# PlemolSC Generator
 
 base_dir=$(cd $(dirname $0); pwd)
 
@@ -37,7 +37,7 @@ if [ "$HIDDEN_SPACE_FLG" = 'true' ]; then
 elif [ "$NERDFONTS_FLG" = 'true' ]; then
   hs_suffix='NF'
 fi
-plemoljp_familyname="PlemolJP"
+plemoljp_familyname="PlemolSC"
 plemoljp_familyname_suffix="${hs_suffix}"
 plemoljp35_familyname=${plemoljp_familyname}"35"
 plemoljp35_familyname_suffix="${hs_suffix}"
@@ -80,7 +80,7 @@ fontforge_command="fontforge"
 redirection_stderr="${base_dir}/error.log"
 
 # Set fonts directories used in auto flag
-fonts_directories="${base_dir}/source/ ${base_dir}/source/IBM-Plex-Mono/ ${base_dir}/source/IBM-Plex-Sans-JP/unhinted/"
+fonts_directories="${base_dir}/source/ ${base_dir}/source/IBM-Plex-Mono/ ${base_dir}/source/IBM-Plex-Sans-SC/unhinted/"
 
 # Set flags
 leaving_tmp_flag="false"
@@ -103,22 +103,22 @@ plexmono_medium_italic_src="IBMPlexMono-MediumItalic.ttf"
 plexmono_semibold_italic_src="IBMPlexMono-SemiBoldItalic.ttf"
 plexmono_bold_italic_src="IBMPlexMono-BoldItalic.ttf"
 
-plexjp_thin_src="IBMPlexSansJP-Thin.ttf"
-plexjp_extralight_src="IBMPlexSansJP-ExtraLight.ttf"
-plexjp_light_src="IBMPlexSansJP-Light.ttf"
-plexjp_regular_src="IBMPlexSansJP-Regular.ttf"
-plexjp_text_src="IBMPlexSansJP-Text.ttf"
-plexjp_medium_src="IBMPlexSansJP-Medium.ttf"
-plexjp_semibold_src="IBMPlexSansJP-SemiBold.ttf"
-plexjp_bold_src="IBMPlexSansJP-Bold.ttf"
-plexjp_thin_italic_src="IBMPlexSansJP-ThinItalic.ttf"
-plexjp_extralight_italic_src="IBMPlexSansJP-ExtraLightItalic.ttf"
-plexjp_light_italic_src="IBMPlexSansJP-LightItalic.ttf"
-plexjp_regular_italic_src="IBMPlexSansJP-Italic.ttf"
-plexjp_text_italic_src="IBMPlexSansJP-TextItalic.ttf"
-plexjp_medium_italic_src="IBMPlexSansJP-MediumItalic.ttf"
-plexjp_semibold_italic_src="IBMPlexSansJP-SemiBoldItalic.ttf"
-plexjp_bold_italic_src="IBMPlexSansJP-BoldItalic.ttf"
+plexjp_thin_src="IBMPlexSansSC-Thin.ttf"
+plexjp_extralight_src="IBMPlexSansSC-ExtraLight.ttf"
+plexjp_light_src="IBMPlexSansSC-Light.ttf"
+plexjp_regular_src="IBMPlexSansSC-Regular.ttf"
+plexjp_text_src="IBMPlexSansSC-Text.ttf"
+plexjp_medium_src="IBMPlexSansSC-Medium.ttf"
+plexjp_semibold_src="IBMPlexSansSC-SemiBold.ttf"
+plexjp_bold_src="IBMPlexSansSC-Bold.ttf"
+plexjp_thin_italic_src="IBMPlexSansSC-ThinItalic.ttf"
+plexjp_extralight_italic_src="IBMPlexSansSC-ExtraLightItalic.ttf"
+plexjp_light_italic_src="IBMPlexSansSC-LightItalic.ttf"
+plexjp_regular_italic_src="IBMPlexSansSC-Italic.ttf"
+plexjp_text_italic_src="IBMPlexSansSC-TextItalic.ttf"
+plexjp_medium_italic_src="IBMPlexSansSC-MediumItalic.ttf"
+plexjp_semibold_italic_src="IBMPlexSansSC-SemiBoldItalic.ttf"
+plexjp_bold_italic_src="IBMPlexSansSC-BoldItalic.ttf"
 
 modified_plexmono_material_generator="modified_plexmono_material_generator.pe"
 modified_plexmono_material_thin="Modified-IBMPlexMono-Material-thin.sfd"
@@ -211,76 +211,76 @@ modified_plexmono35_semibold_italic="Modified-IBMPlexMono35-semiBold_italic.sfd"
 modified_plexmono35_bold_italic="Modified-IBMPlexMono35-Bold_italic.sfd"
 
 modified_plexjp_generator="modified_plexjp_generator.pe"
-modified_plexjp_thin="Modified-IBMPlexSansJP-thin.sfd"
-modified_plexjp_extralight="Modified-IBMPlexSansJP-extralight.sfd"
-modified_plexjp_light="Modified-IBMPlexSansJP-light.sfd"
-modified_plexjp_regular="Modified-IBMPlexSansJP-regular.sfd"
-modified_plexjp_text="Modified-IBMPlexSansJP-text.sfd"
-modified_plexjp_medium="Modified-IBMPlexSansJP-medium.sfd"
-modified_plexjp_semibold="Modified-IBMPlexSansJP-semibold.sfd"
-modified_plexjp_bold="Modified-IBMPlexSansJP-bold.sfd"
-modified_plexjp_thin_italic="Modified-IBMPlexSansJP-thin_italic.sfd"
-modified_plexjp_extralight_italic="Modified-IBMPlexSansJP-extralight_italic.sfd"
-modified_plexjp_light_italic="Modified-IBMPlexSansJP-light_italic.sfd"
-modified_plexjp_regular_italic="Modified-IBMPlexSansJP-regular_italic.sfd"
-modified_plexjp_text_italic="Modified-IBMPlexSansJP-text_italic.sfd"
-modified_plexjp_medium_italic="Modified-IBMPlexSansJP-medium_italic.sfd"
-modified_plexjp_semibold_italic="Modified-IBMPlexSansJP-semibold_italic.sfd"
-modified_plexjp_bold_italic="Modified-IBMPlexSansJP-bold_italic.sfd"
+modified_plexjp_thin="Modified-IBMPlexSansSC-thin.sfd"
+modified_plexjp_extralight="Modified-IBMPlexSansSC-extralight.sfd"
+modified_plexjp_light="Modified-IBMPlexSansSC-light.sfd"
+modified_plexjp_regular="Modified-IBMPlexSansSC-regular.sfd"
+modified_plexjp_text="Modified-IBMPlexSansSC-text.sfd"
+modified_plexjp_medium="Modified-IBMPlexSansSC-medium.sfd"
+modified_plexjp_semibold="Modified-IBMPlexSansSC-semibold.sfd"
+modified_plexjp_bold="Modified-IBMPlexSansSC-bold.sfd"
+modified_plexjp_thin_italic="Modified-IBMPlexSansSC-thin_italic.sfd"
+modified_plexjp_extralight_italic="Modified-IBMPlexSansSC-extralight_italic.sfd"
+modified_plexjp_light_italic="Modified-IBMPlexSansSC-light_italic.sfd"
+modified_plexjp_regular_italic="Modified-IBMPlexSansSC-regular_italic.sfd"
+modified_plexjp_text_italic="Modified-IBMPlexSansSC-text_italic.sfd"
+modified_plexjp_medium_italic="Modified-IBMPlexSansSC-medium_italic.sfd"
+modified_plexjp_semibold_italic="Modified-IBMPlexSansSC-semibold_italic.sfd"
+modified_plexjp_bold_italic="Modified-IBMPlexSansSC-bold_italic.sfd"
 
 modified_plexjp35_generator="modified_plexjp35_generator.pe"
-modified_plexjp35_thin="Modified-IBMPlexSansJP35-thin.sfd"
-modified_plexjp35_extralight="Modified-IBMPlexSansJP35-extralight.sfd"
-modified_plexjp35_light="Modified-IBMPlexSansJP35-light.sfd"
-modified_plexjp35_regular="Modified-IBMPlexSansJP35-Monospace-regular.sfd"
-modified_plexjp35_text="Modified-IBMPlexSansJP35-Monospace-text.sfd"
-modified_plexjp35_medium="Modified-IBMPlexSansJP35-medium.sfd"
-modified_plexjp35_semibold="Modified-IBMPlexSansJP35-semibold.sfd"
-modified_plexjp35_bold="Modified-IBMPlexSansJP35-Monospace-bold.sfd"
-modified_plexjp35_thin_italic="Modified-IBMPlexSansJP35-thin_italic.sfd"
-modified_plexjp35_extralight_italic="Modified-IBMPlexSansJP35-extralight_italic.sfd"
-modified_plexjp35_light_italic="Modified-IBMPlexSansJP35-light_italic.sfd"
-modified_plexjp35_regular_italic="Modified-IBMPlexSansJP35-Monospace-regular_italic.sfd"
-modified_plexjp35_text_italic="Modified-IBMPlexSansJP35-Monospace-text_italic.sfd"
-modified_plexjp35_medium_italic="Modified-IBMPlexSansJP35-medium_italic.sfd"
-modified_plexjp35_semibold_italic="Modified-IBMPlexSansJP35-semibold_italic.sfd"
-modified_plexjp35_bold_italic="Modified-IBMPlexSansJP35-Monospace-bold_italic.sfd"
+modified_plexjp35_thin="Modified-IBMPlexSansSC35-thin.sfd"
+modified_plexjp35_extralight="Modified-IBMPlexSansSC35-extralight.sfd"
+modified_plexjp35_light="Modified-IBMPlexSansSC35-light.sfd"
+modified_plexjp35_regular="Modified-IBMPlexSansSC35-Monospace-regular.sfd"
+modified_plexjp35_text="Modified-IBMPlexSansSC35-Monospace-text.sfd"
+modified_plexjp35_medium="Modified-IBMPlexSansSC35-medium.sfd"
+modified_plexjp35_semibold="Modified-IBMPlexSansSC35-semibold.sfd"
+modified_plexjp35_bold="Modified-IBMPlexSansSC35-Monospace-bold.sfd"
+modified_plexjp35_thin_italic="Modified-IBMPlexSansSC35-thin_italic.sfd"
+modified_plexjp35_extralight_italic="Modified-IBMPlexSansSC35-extralight_italic.sfd"
+modified_plexjp35_light_italic="Modified-IBMPlexSansSC35-light_italic.sfd"
+modified_plexjp35_regular_italic="Modified-IBMPlexSansSC35-Monospace-regular_italic.sfd"
+modified_plexjp35_text_italic="Modified-IBMPlexSansSC35-Monospace-text_italic.sfd"
+modified_plexjp35_medium_italic="Modified-IBMPlexSansSC35-medium_italic.sfd"
+modified_plexjp35_semibold_italic="Modified-IBMPlexSansSC35-semibold_italic.sfd"
+modified_plexjp35_bold_italic="Modified-IBMPlexSansSC35-Monospace-bold_italic.sfd"
 
 modified_plexjp_console_generator="modified_plexjp_console_generator.pe"
-modified_plexjp_console_thin="Modified-IBMPlexSansJP-thin_console.sfd"
-modified_plexjp_console_extralight="Modified-IBMPlexSansJP-extralight_console.sfd"
-modified_plexjp_console_light="Modified-IBMPlexSansJP-light_console.sfd"
-modified_plexjp_console_regular="Modified-IBMPlexSansJP-regular_console.sfd"
-modified_plexjp_console_text="Modified-IBMPlexSansJP-text_console.sfd"
-modified_plexjp_console_medium="Modified-IBMPlexSansJP-medium_console.sfd"
-modified_plexjp_console_semibold="Modified-IBMPlexSansJP-semibold_console.sfd"
-modified_plexjp_console_bold="Modified-IBMPlexSansJP-bold_console.sfd"
-modified_plexjp_console_thin_italic="Modified-IBMPlexSansJP-thin_console_italic.sfd"
-modified_plexjp_console_extralight_italic="Modified-IBMPlexSansJP-extralight_console_italic.sfd"
-modified_plexjp_console_light_italic="Modified-IBMPlexSansJP-light_console_italic.sfd"
-modified_plexjp_console_regular_italic="Modified-IBMPlexSansJP-regular_console_italic.sfd"
-modified_plexjp_console_text_italic="Modified-IBMPlexSansJP-text_console_italic.sfd"
-modified_plexjp_console_medium_italic="Modified-IBMPlexSansJP-medium_console_italic.sfd"
-modified_plexjp_console_semibold_italic="Modified-IBMPlexSansJP-semibold_console_italic.sfd"
-modified_plexjp_console_bold_italic="Modified-IBMPlexSansJP-bold_console_italic.sfd"
+modified_plexjp_console_thin="Modified-IBMPlexSansSC-thin_console.sfd"
+modified_plexjp_console_extralight="Modified-IBMPlexSansSC-extralight_console.sfd"
+modified_plexjp_console_light="Modified-IBMPlexSansSC-light_console.sfd"
+modified_plexjp_console_regular="Modified-IBMPlexSansSC-regular_console.sfd"
+modified_plexjp_console_text="Modified-IBMPlexSansSC-text_console.sfd"
+modified_plexjp_console_medium="Modified-IBMPlexSansSC-medium_console.sfd"
+modified_plexjp_console_semibold="Modified-IBMPlexSansSC-semibold_console.sfd"
+modified_plexjp_console_bold="Modified-IBMPlexSansSC-bold_console.sfd"
+modified_plexjp_console_thin_italic="Modified-IBMPlexSansSC-thin_console_italic.sfd"
+modified_plexjp_console_extralight_italic="Modified-IBMPlexSansSC-extralight_console_italic.sfd"
+modified_plexjp_console_light_italic="Modified-IBMPlexSansSC-light_console_italic.sfd"
+modified_plexjp_console_regular_italic="Modified-IBMPlexSansSC-regular_console_italic.sfd"
+modified_plexjp_console_text_italic="Modified-IBMPlexSansSC-text_console_italic.sfd"
+modified_plexjp_console_medium_italic="Modified-IBMPlexSansSC-medium_console_italic.sfd"
+modified_plexjp_console_semibold_italic="Modified-IBMPlexSansSC-semibold_console_italic.sfd"
+modified_plexjp_console_bold_italic="Modified-IBMPlexSansSC-bold_console_italic.sfd"
 
 modified_plexjp35_console_generator="modified_plexjp35_console_generator.pe"
-modified_plexjp35_console_thin="Modified-IBMPlexSansJP35-thin_console.sfd"
-modified_plexjp35_console_extralight="Modified-IBMPlexSansJP35-extralight_console.sfd"
-modified_plexjp35_console_light="Modified-IBMPlexSansJP35-light_console.sfd"
-modified_plexjp35_console_regular="Modified-IBMPlexSansJP35-Monospace-regular_console.sfd"
-modified_plexjp35_console_text="Modified-IBMPlexSansJP35-Monospace-text_console.sfd"
-modified_plexjp35_console_medium="Modified-IBMPlexSansJP35-medium_console.sfd"
-modified_plexjp35_console_semibold="Modified-IBMPlexSansJP35-semibold_console.sfd"
-modified_plexjp35_console_bold="Modified-IBMPlexSansJP35-Monospace-bold_console.sfd"
-modified_plexjp35_console_thin_italic="Modified-IBMPlexSansJP35-thin_console_italic.sfd"
-modified_plexjp35_console_extralight_italic="Modified-IBMPlexSansJP35-extralight_console_italic.sfd"
-modified_plexjp35_console_light_italic="Modified-IBMPlexSansJP35-light_console_italic.sfd"
-modified_plexjp35_console_regular_italic="Modified-IBMPlexSansJP35-Monospace-regular_console_italic.sfd"
-modified_plexjp35_console_text_italic="Modified-IBMPlexSansJP35-Monospace-text_console_italic.sfd"
-modified_plexjp35_console_medium_italic="Modified-IBMPlexSansJP35-medium_console_italic.sfd"
-modified_plexjp35_console_semibold_italic="Modified-IBMPlexSansJP35-semibold_console_italic.sfd"
-modified_plexjp35_console_bold_italic="Modified-IBMPlexSansJP35-Monospace-bold_console_italic.sfd"
+modified_plexjp35_console_thin="Modified-IBMPlexSansSC35-thin_console.sfd"
+modified_plexjp35_console_extralight="Modified-IBMPlexSansSC35-extralight_console.sfd"
+modified_plexjp35_console_light="Modified-IBMPlexSansSC35-light_console.sfd"
+modified_plexjp35_console_regular="Modified-IBMPlexSansSC35-Monospace-regular_console.sfd"
+modified_plexjp35_console_text="Modified-IBMPlexSansSC35-Monospace-text_console.sfd"
+modified_plexjp35_console_medium="Modified-IBMPlexSansSC35-medium_console.sfd"
+modified_plexjp35_console_semibold="Modified-IBMPlexSansSC35-semibold_console.sfd"
+modified_plexjp35_console_bold="Modified-IBMPlexSansSC35-Monospace-bold_console.sfd"
+modified_plexjp35_console_thin_italic="Modified-IBMPlexSansSC35-thin_console_italic.sfd"
+modified_plexjp35_console_extralight_italic="Modified-IBMPlexSansSC35-extralight_console_italic.sfd"
+modified_plexjp35_console_light_italic="Modified-IBMPlexSansSC35-light_console_italic.sfd"
+modified_plexjp35_console_regular_italic="Modified-IBMPlexSansSC35-Monospace-regular_console_italic.sfd"
+modified_plexjp35_console_text_italic="Modified-IBMPlexSansSC35-Monospace-text_console_italic.sfd"
+modified_plexjp35_console_medium_italic="Modified-IBMPlexSansSC35-medium_console_italic.sfd"
+modified_plexjp35_console_semibold_italic="Modified-IBMPlexSansSC35-semibold_console_italic.sfd"
+modified_plexjp35_console_bold_italic="Modified-IBMPlexSansSC35-Monospace-bold_console_italic.sfd"
 
 plemoljp_generator="plemoljp_generator.pe"
 plemoljp_console_generator="plemoljp_console_generator.pe"
@@ -328,7 +328,7 @@ then
   exit 1
 fi
 
-# Search IBMPlexSansJP
+# Search IBMPlexSansSC
 input_plexjp_thin=`find $fonts_directories -follow -iname "$plexjp_thin_src" | head -n 1`
 input_plexjp_extralight=`find $fonts_directories -follow -iname "$plexjp_extralight_src" | head -n 1`
 input_plexjp_light=`find $fonts_directories -follow -iname "$plexjp_light_src" | head -n 1`
@@ -349,9 +349,9 @@ fi
 [ "$(basename $input_plexmono_bold)" != "$plexmono_bold_src" ] &&
   echo "Warning: ${input_plexmono_regular} does not seem to be IBMPlexMono Bold" >&2
 [ "$(basename $input_plexjp_regular)" != "$plexjp_regular_src" ] &&
-  echo "Warning: ${input_plexjp_regular} does not seem to be IBMPlexSansJP Regular" >&2
+  echo "Warning: ${input_plexjp_regular} does not seem to be IBMPlexSansSC Regular" >&2
 [ "$(basename $input_plexjp_bold)" != "$plexjp_bold_src" ] &&
-  echo "Warning: ${input_plexjp_bold} does not seem to be IBMPlexSansJP Bold" >&2
+  echo "Warning: ${input_plexjp_bold} does not seem to be IBMPlexSansSC Bold" >&2
 
 # Check fontforge existance
 if ! which $fontforge_command > /dev/null 2>&1
@@ -424,7 +424,7 @@ select_glyph_is_not_console="
   SelectFewer(0u25e6)
   ## 結合文音記号は IBM Plex Mono を適用
   SelectFewer(0u0300, 0u0328)
-  ## IBM Plex Sans JP 等幅化対策 (IBM Plex Mono を適用して半角化)
+  ## IBM Plex Sans SC 等幅化対策 (IBM Plex Mono を適用して半角化)
   SelectFewer(171)
   SelectFewer(187)
   ## flaction slash
@@ -433,7 +433,7 @@ select_glyph_is_not_console="
   SelectFewer(0u00a6)
 "
 
-# IBM Plex Sans JP 等幅化対策 (全角左寄せの除外)
+# IBM Plex Sans SC 等幅化対策 (全角左寄せの除外)
 set_full_left_fewer="
   SelectFewer(8217)
   SelectFewer(8218)
@@ -441,7 +441,7 @@ set_full_left_fewer="
   SelectFewer(8222)
 "
 
-# IBM Plex Sans JP 等幅化対策 (Widthを全角にしてからセンタリング)
+# IBM Plex Sans SC 等幅化対策 (Widthを全角にしてからセンタリング)
 set_width_full_and_center="
   SelectNone()
   SelectMore(204)
@@ -465,7 +465,7 @@ set_width_full_and_center="
   SelectMore(8254)
 "
 
-# IBM Plex Sans JP 等幅化対策 (半角左寄せ対象をセンタリングから除外する)
+# IBM Plex Sans SC 等幅化対策 (半角左寄せ対象をセンタリングから除外する)
 set_half_left_fewer="
   SelectFewer(0u2500, 0u257F)
   SelectFewer(65377)
@@ -480,7 +480,7 @@ set_half_left_fewer="
   SelectFewer(1114341)
 "
 
-# IBM Plex Sans JP 等幅化対策 (半角右寄せ対象をセンタリングから除外する)
+# IBM Plex Sans SC 等幅化対策 (半角右寄せ対象をセンタリングから除外する)
 set_half_right_fewer="
   SelectFewer(65378)
   SelectFewer(1114332)
@@ -490,7 +490,7 @@ set_half_right_fewer="
   SelectFewer(1114340)
 "
 
-# IBM Plex Sans JP 等幅化対策 (全角化しつつ右寄せをセンタリングから除外する)
+# IBM Plex Sans SC 等幅化対策 (全角化しつつ右寄せをセンタリングから除外する)
 set_half_to_full_right_fewer="
   SelectFewer(8216)
   SelectFewer(8220)
@@ -905,7 +905,7 @@ while (i < SizeOf(input_list))
   Select(0u1d1c); Paste()
   Scale(85, 60); SetWidth(glyphWidth)
 
-  # IBM Plex Sans JP グリフを使用
+  # IBM Plex Sans SC グリフを使用
   Select(0u00A2) # Cent Sign
   SelectMore(0u00A3) # Pound Sign
   SelectMore(0u00A5) # Yen Sign
@@ -1287,13 +1287,13 @@ Quit()
 _EOT_
 
 ########################################
-# Generate script for modified IBMPlexSansJP
+# Generate script for modified IBMPlexSansSC
 ########################################
 
 cat > ${tmpdir}/${modified_plexjp_generator} << _EOT_
 #!$fontforge_command -script
 
-Print("Generate modified IBMPlexSansJP")
+Print("Generate modified IBMPlexSansSC")
 
 # Set parameters
 plexmono = "${tmpdir}/${modified_plexmono_regular}"
@@ -1448,7 +1448,7 @@ Print("Half width check loop end")
 
 i = 0
 while (i < SizeOf(input_list))
-  # Open IBMPlexSansJP
+  # Open IBMPlexSansSC
   Print("Open " + input_list[i])
   Open(input_list[i])
 
@@ -1458,7 +1458,7 @@ while (i < SizeOf(input_list))
 
   # 斜体の生成
   if (Strstr(fontstyle_list[i], 'Italic') >= 0)
-    Print('Generate ' + fontstyle_list[i] + ' of IBMPlexSansJP')
+    Print('Generate ' + fontstyle_list[i] + ' of IBMPlexSansSC')
     Italic(${italic_angle})
   endif
 
@@ -1533,7 +1533,7 @@ while (i < SizeOf(input_list))
   $set_width_full_and_center
   SetWidth($plemoljp_full_width)
   CenterInWidth()
-  # IBM Plex Sans JP 等幅化対策 (半角左寄せ)
+  # IBM Plex Sans SC 等幅化対策 (半角左寄せ)
   half_left_list = [65377, 65379, 65380, 65438, 65439, 1114333, 1114335, 1114337, 1114339, 1114341]
   ii = 0
   while (ii < SizeOf(half_left_list))
@@ -1544,7 +1544,7 @@ while (i < SizeOf(input_list))
     SetWidth(${plemoljp_half_width})
     ii = ii + 1
   endloop
-  # IBM Plex Sans JP 等幅化対策 (全角左寄せ)
+  # IBM Plex Sans SC 等幅化対策 (全角左寄せ)
   full_left_list = [8217 ,8218 ,8221 ,8222]
   ii = 0
   while (ii < SizeOf(full_left_list))
@@ -1555,7 +1555,7 @@ while (i < SizeOf(input_list))
     SetWidth(${plemoljp_full_width})
     ii = ii + 1
   endloop
-  # IBM Plex Sans JP 等幅化対策 (半角右寄せ)
+  # IBM Plex Sans SC 等幅化対策 (半角右寄せ)
   full_right_list = [65378, 1114332, 1114334, 1114336, 1114338, 1114340]
   ii = 0
   while (ii < SizeOf(full_right_list))
@@ -1568,7 +1568,7 @@ while (i < SizeOf(input_list))
     SetWidth(${plemoljp_half_width})
     ii = ii + 1
   endloop
-  # IBM Plex Sans JP 等幅化対策 (全角化して右寄せ)
+  # IBM Plex Sans SC 等幅化対策 (全角化して右寄せ)
   half_to_full_right_list = [8216, 8220]
   ii = 0
   while (ii < SizeOf(half_to_full_right_list))
@@ -1609,7 +1609,7 @@ while (i < SizeOf(input_list))
   Select(0u201c);Scale(125) ; SetWidth(${plemoljp_full_width}) # “
   Select(0u201d);Scale(125) ; SetWidth(${plemoljp_full_width}) # ”
 
-  # Cent Sign, Pound Sign, Yen Sign は IBM Plex Sans JP を使用
+  # Cent Sign, Pound Sign, Yen Sign は IBM Plex Sans SC を使用
   Select(0u00A2)
   SelectMore(0u00A3)
   SelectMore(0u00A5)
@@ -1631,13 +1631,13 @@ while (i < SizeOf(input_list))
     ii++
   endloop
 
-  # Save modified IBMPlexSansJP
+  # Save modified IBMPlexSansSC
   Print("Save " + output_list[i])
   Save("${tmpdir}/" + output_list[i])
   Close()
 
   # Open new file
-  Print("Generate IBMPlexSansJP ttf")
+  Print("Generate IBMPlexSansSC ttf")
   New()
   # Set encoding to Unicode-bmp
   Reencode("unicode")
@@ -1687,13 +1687,13 @@ Quit()
 _EOT_
 
 ########################################
-# Generate script for modified IBMPlexSansJP for PlemolJP35
+# Generate script for modified IBMPlexSansSC for PlemolSC35
 ########################################
 
 cat > ${tmpdir}/${modified_plexjp35_generator} << _EOT_
 #!$fontforge_command -script
 
-Print("Generate modified IBMPlexSansJP - 35")
+Print("Generate modified IBMPlexSansSC - 35")
 
 # Set parameters
 plexmono = "${tmpdir}/${modified_plexmono35_regular}"
@@ -1849,7 +1849,7 @@ Print("Half width check loop end")
 
 i = 0
 while (i < SizeOf(input_list))
-  # Open IBMPlexSansJP
+  # Open IBMPlexSansSC
   Print("Open " + input_list[i])
   Open(input_list[i])
 
@@ -1859,7 +1859,7 @@ while (i < SizeOf(input_list))
 
   # 斜体の生成
   if (Strstr(fontstyle_list[i], 'Italic') >= 0)
-    Print('Generate ' + fontstyle_list[i] + ' of IBMPlexSansJP')
+    Print('Generate ' + fontstyle_list[i] + ' of IBMPlexSansSC')
     Italic(${italic_angle})
   endif
 
@@ -1932,7 +1932,7 @@ while (i < SizeOf(input_list))
   $set_width_full_and_center
   SetWidth($plemoljp35_full_width)
   CenterInWidth()
-  # IBM Plex Sans JP 等幅化対策 (半角左寄せ)
+  # IBM Plex Sans SC 等幅化対策 (半角左寄せ)
   half_left_list = [65377, 65379, 65380, 65438, 65439, 1114333, 1114335, 1114337, 1114339, 1114341]
   ii = 0
   while (ii < SizeOf(half_left_list))
@@ -1943,7 +1943,7 @@ while (i < SizeOf(input_list))
     SetWidth(${plemoljp35_half_width})
     ii = ii + 1
   endloop
-  # IBM Plex Sans JP 等幅化対策 (全角左寄せ)
+  # IBM Plex Sans SC 等幅化対策 (全角左寄せ)
   full_left_list = [8217 ,8218 ,8221 ,8222]
   ii = 0
   while (ii < SizeOf(full_left_list))
@@ -1954,7 +1954,7 @@ while (i < SizeOf(input_list))
     SetWidth(${plemoljp35_full_width})
     ii = ii + 1
   endloop
-  # IBM Plex Sans JP 等幅化対策 (半角右寄せ)
+  # IBM Plex Sans SC 等幅化対策 (半角右寄せ)
   full_right_list = [65378, 1114332, 1114334, 1114336, 1114338, 1114340]
   ii = 0
   while (ii < SizeOf(full_right_list))
@@ -1967,7 +1967,7 @@ while (i < SizeOf(input_list))
     SetWidth(${plemoljp35_half_width})
     ii = ii + 1
   endloop
-  # IBM Plex Sans JP 等幅化対策 (全角化して右寄せ)
+  # IBM Plex Sans SC 等幅化対策 (全角化して右寄せ)
   half_to_full_right_list = [8216, 8220]
   ii = 0
   while (ii < SizeOf(half_to_full_right_list))
@@ -2008,7 +2008,7 @@ while (i < SizeOf(input_list))
   Select(0u201c);Scale(125) ; SetWidth(${plemoljp35_full_width}) # “
   Select(0u201d);Scale(125) ; SetWidth(${plemoljp35_full_width}) # ”
 
-  # Cent Sign, Pound Sign, Yen Sign は IBM Plex Sans JP を使用
+  # Cent Sign, Pound Sign, Yen Sign は IBM Plex Sans SC を使用
   Select(0u00A2)
   SelectMore(0u00A3)
   SelectMore(0u00A5)
@@ -2030,13 +2030,13 @@ while (i < SizeOf(input_list))
     ii++
   endloop
 
-  # Save modified IBMPlexSansJP
+  # Save modified IBMPlexSansSC
   Print("Save " + output_list[i])
   Save("${tmpdir}/" + output_list[i])
   Close()
 
   # Open new file
-  Print("Generate IBMPlexSansJP ttf")
+  Print("Generate IBMPlexSansSC ttf")
   New()
   # Set encoding to Unicode-bmp
   Reencode("unicode")
@@ -2086,13 +2086,13 @@ Quit()
 _EOT_
 
 ########################################
-# Generate script for modified IBMPlexSansJP Console
+# Generate script for modified IBMPlexSansSC Console
 ########################################
 
 cat > ${tmpdir}/${modified_plexjp_console_generator} << _EOT_
 #!$fontforge_command -script
 
-Print("Generate modified IBMPlexSansJP Console")
+Print("Generate modified IBMPlexSansSC Console")
 
 # Set parameters
 plexmono = "${tmpdir}/${modified_plexmono_material_regular}"
@@ -2159,7 +2159,7 @@ Close()
 # Begin loop of regular and bold
 i = 0
 while (i < SizeOf(input_list))
-  # Open IBMPlexSansJP
+  # Open IBMPlexSansSC
   Print("Open " + input_list[i])
   Open(input_list[i])
 
@@ -2252,7 +2252,7 @@ while (i < SizeOf(input_list))
     ii++
   endloop
 
-  # Save modified IBMPlexSansJP
+  # Save modified IBMPlexSansSC
   Print("Generate " + output_list[i])
   Generate("${tmpdir}/" + output_list[i] + ".ttf", "")
   Close()
@@ -2264,13 +2264,13 @@ Quit()
 _EOT_
 
 ########################################
-# Generate script for modified IBMPlexSansJP Console for PlemolJP35
+# Generate script for modified IBMPlexSansSC Console for PlemolSC35
 ########################################
 
 cat > ${tmpdir}/${modified_plexjp35_console_generator} << _EOT_
 #!$fontforge_command -script
 
-Print("Generate modified IBMPlexSansJP Console - 35")
+Print("Generate modified IBMPlexSansSC Console - 35")
 
 # Set parameters
 plexmono = "${tmpdir}/${modified_plexmono_material_regular}"
@@ -2337,7 +2337,7 @@ Close()
 # Begin loop of regular and bold
 i = 0
 while (i < SizeOf(input_list))
-  # Open IBMPlexSansJP
+  # Open IBMPlexSansSC
   Print("Open " + input_list[i])
   Open(input_list[i])
 
@@ -2424,7 +2424,7 @@ while (i < SizeOf(input_list))
     ii++
   endloop
 
-  # Save modified IBMPlexSansJP
+  # Save modified IBMPlexSansSC
   Print("Generate " + output_list[i])
   Generate("${tmpdir}/" + output_list[i] + ".ttf", "")
   Close()
@@ -2436,14 +2436,14 @@ Quit()
 _EOT_
 
 ########################################
-# Generate script for PlemolJP
+# Generate script for PlemolSC
 ########################################
 
 cat > ${tmpdir}/${plemoljp_generator} << _EOT_
 #!$fontforge_command -script
 
 # Print message
-Print("Generate PlemolJP")
+Print("Generate PlemolSC")
 
 # Set parameters
 plexmono_list  = [ \\
@@ -2648,7 +2648,7 @@ while (i < SizeOf(fontstyle_list))
   Print("Merge " + plexmono_list[i]:t)
   MergeFonts(plexmono_list[i])
 
-  # Save PlemolJP
+  # Save PlemolSC
   if (fontfamilysuffix != "")
         Print("Save " + fontfamily + fontfamilysuffix + "-" + fontname_style + ".ttf")
         Generate("${base_dir}/" + fontfamily + fontfamilysuffix + "-" + fontname_style + ".ttf", "")
@@ -2665,14 +2665,14 @@ Quit()
 _EOT_
 
 ########################################
-# Generate script for PlemolJP Console
+# Generate script for PlemolSC Console
 ########################################
 
 cat > ${tmpdir}/${plemoljp_console_generator} << _EOT_
 #!$fontforge_command -script
 
 # Print message
-Print("Generate PlemolJP Console")
+Print("Generate PlemolSC Console")
 
 # Set parameters
 plexmono_list  = [ \\
@@ -2881,7 +2881,7 @@ while (i < SizeOf(fontstyle_list))
   Print("Merge " + plexmono_list[i]:t)
   MergeFonts(plexmono_list[i])
 
-  # Save PlemolJP
+  # Save PlemolSC
   if (fontfamilysuffix_nonspace != "")
         Print("Save " + fontfamily + fontfamilysuffix_nonspace + "-" + fontname_style + ".ttf")
         Generate("${base_dir}/" + fontfamily + fontfamilysuffix_nonspace + "-" + fontname_style + ".ttf", "")
@@ -2898,14 +2898,14 @@ Quit()
 _EOT_
 
 ########################################
-# Generate script for PlemolJP35
+# Generate script for PlemolSC35
 ########################################
 
 cat > ${tmpdir}/${plemoljp35_generator} << _EOT_
 #!$fontforge_command -script
 
 # Print message
-Print("Generate PlemolJP")
+Print("Generate PlemolSC")
 
 # Set parameters
 plexmono_list  = [ \\
@@ -3110,7 +3110,7 @@ while (i < SizeOf(fontstyle_list))
   Print("Merge " + plexmono_list[i]:t)
   MergeFonts(plexmono_list[i])
 
-  # Save PlemolJP
+  # Save PlemolSC
   if (fontfamilysuffix != "")
         Print("Save " + fontfamily + fontfamilysuffix + "-" + fontname_style + ".ttf")
         Generate("${base_dir}/" + fontfamily + fontfamilysuffix + "-" + fontname_style + ".ttf", "")
@@ -3127,14 +3127,14 @@ Quit()
 _EOT_
 
 ########################################
-# Generate script for PlemolJP35 Console
+# Generate script for PlemolSC35 Console
 ########################################
 
 cat > ${tmpdir}/${plemoljp35_console_generator} << _EOT_
 #!$fontforge_command -script
 
 # Print message
-Print("Generate PlemolJP Console")
+Print("Generate PlemolSC Console")
 
 # Set parameters
 plexmono_list  = [ \\
@@ -3342,7 +3342,7 @@ while (i < SizeOf(fontstyle_list))
   Print("Merge " + plexmono_list[i]:t)
   MergeFonts(plexmono_list[i])
 
-  # Save PlemolJP
+  # Save PlemolSC
   if (fontfamilysuffix_nonspace != "")
         Print("Save " + fontfamily + fontfamilysuffix_nonspace + "-" + fontname_style + ".ttf")
         Generate("${base_dir}/" + fontfamily + fontfamilysuffix_nonspace + "-" + fontname_style + ".ttf", "")
@@ -3359,7 +3359,7 @@ Quit()
 _EOT_
 
 ########################################
-# Generate PlemolJP
+# Generate PlemolSC
 ########################################
 
 # Generate Nerd Fonts Symbols
@@ -3376,16 +3376,16 @@ $fontforge_command -script ${tmpdir}/${modified_plexmono_console_generator} 2> $
 # Generate Modiifed IBMPlexMono
 $fontforge_command -script ${tmpdir}/${modified_plexmono_generator} 2> $redirection_stderr || exit 4
 
-# Generate Modified IBMPlexSansJP
+# Generate Modified IBMPlexSansSC
 $fontforge_command -script ${tmpdir}/${modified_plexjp_generator} 2> $redirection_stderr || exit 4
 
-# Generate Modified IBMPlexSansJP Console
+# Generate Modified IBMPlexSansSC Console
 $fontforge_command -script ${tmpdir}/${modified_plexjp_console_generator} 2> $redirection_stderr || exit 4
 
-# Generate PlemolJP
+# Generate PlemolSC
 $fontforge_command -script ${tmpdir}/${plemoljp_generator} 2> $redirection_stderr || exit 4
 
-# Generate PlemolJP Console
+# Generate PlemolSC Console
 $fontforge_command -script ${tmpdir}/${plemoljp_console_generator} 2> $redirection_stderr || exit 4
 
 # Generate Console - 35
@@ -3394,16 +3394,16 @@ $fontforge_command -script ${tmpdir}/${modified_plexmono35_console_generator} 2>
 # Generate Modiifed IBMPlexMono - 35
 $fontforge_command -script ${tmpdir}/${modified_plexmono35_generator} 2> $redirection_stderr || exit 4
 
-# Generate Modified IBMPlexSansJP - 35
+# Generate Modified IBMPlexSansSC - 35
 $fontforge_command -script ${tmpdir}/${modified_plexjp35_generator} 2> $redirection_stderr || exit 4
 
-# Generate Modified IBMPlexSansJP Console - 35
+# Generate Modified IBMPlexSansSC Console - 35
 $fontforge_command -script ${tmpdir}/${modified_plexjp35_console_generator} 2> $redirection_stderr || exit 4
 
-# Generate PlemolJP - 35
+# Generate PlemolSC - 35
 $fontforge_command -script ${tmpdir}/${plemoljp35_generator} 2> $redirection_stderr || exit 4
 
-# Generate PlemolJP Console - 35
+# Generate PlemolSC Console - 35
 $fontforge_command -script ${tmpdir}/${plemoljp35_console_generator} 2> $redirection_stderr || exit 4
 
 style_list='Thin ExtraLight Light Regular Text Medium SemiBold Bold ThinItalic ExtraLightItalic LightItalic Italic TextItalic MediumItalic SemiBoldItalic BoldItalic'
@@ -3422,7 +3422,7 @@ do
   nerdfonts35="${tmpdir}/${modified_nerdfonts35}"
 
   # Add hinting
-  # PlemolJP
+  # PlemolSC
   for f in "$plemoljp_filename" "$plemoljp_console_filename"
   do
     m_opt=''
@@ -3432,7 +3432,7 @@ do
     fi
     python3 -m ttfautohint $m_opt -l 6 -r 45 -a nnn -D latn -W -X "13-" -I "$f" "hinted_${f}"
   done
-  # PlemolJP35
+  # PlemolSC35
   for f in "$plemoljp35_filename" "$plemoljp35_console_filename"
   do
     m_opt=''
@@ -3549,7 +3549,7 @@ do
 
   # Generate Nerd Fonts version
   if [ "$NERDFONTS_FLG" = 'true' ]; then
-    # PlemolJP Console NF
+    # PlemolSC Console NF
     echo "pyftmerge: ${plemoljp_console_filename}"
     (
       cdAutoMakeDir "${tmpdir}/parallel_merge/${plemoljp_console_filename}"
@@ -3558,7 +3558,7 @@ do
       mv merged.ttf "${base_dir}/${plemoljp_console_filename}"
     ) > "${tmpdir}/${plemoljp_console_filename}.pyftmerge_output" 2>&1 &
 
-    # PlemolJP35 Console NF
+    # PlemolSC35 Console NF
     echo "pyftmerge: ${plemoljp35_console_filename}"
     (
       cdAutoMakeDir "${tmpdir}/parallel_merge/${plemoljp35_console_filename}"
@@ -3585,7 +3585,7 @@ do
     continue
   fi
 
-  # PlemolJP
+  # PlemolSC
   echo "pyftmerge: ${plemoljp_filename}"
   (
     cdAutoMakeDir "${tmpdir}/parallel_merge/${plemoljp_filename}"
@@ -3593,7 +3593,7 @@ do
     mv merged.ttf "${base_dir}/${plemoljp_filename}"
   ) > "${tmpdir}/${plemoljp_filename}.pyftmerge_output" 2>&1 &
 
-  # PlemolJP Console
+  # PlemolSC Console
   echo "pyftmerge: ${plemoljp_console_filename}"
   (
     cdAutoMakeDir "${tmpdir}/parallel_merge/${plemoljp_console_filename}"
@@ -3601,7 +3601,7 @@ do
     mv merged.ttf "${base_dir}/${plemoljp_console_filename}"
   ) > "${tmpdir}/${plemoljp_console_filename}.pyftmerge_output" 2>&1 &
 
-  # PlemolJP35
+  # PlemolSC35
   echo "pyftmerge: ${plemoljp35_filename}"
   (
     cdAutoMakeDir "${tmpdir}/parallel_merge/${plemoljp35_filename}"
@@ -3609,7 +3609,7 @@ do
     mv merged.ttf "${base_dir}/${plemoljp35_filename}"
   ) > "${tmpdir}/${plemoljp35_filename}.pyftmerge_output" 2>&1 &
 
-  # PlemolJP35 Console
+  # PlemolSC35 Console
   echo "pyftmerge: ${plemoljp35_console_filename}"
   (
     cdAutoMakeDir "${tmpdir}/parallel_merge/${plemoljp35_console_filename}"
@@ -3646,5 +3646,5 @@ then
 fi
 
 # Exit
-echo "Succeeded in generating PlemolJP!"
+echo "Succeeded in generating PlemolSC!"
 exit 0

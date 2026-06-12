@@ -4,10 +4,10 @@ BASE_DIR=$(cd $(dirname $0); pwd)
 PREFIX="$1"
 
 xAvgCharWidth_SETVAL=528
-FONT_PATTERN=${PREFIX}'PlemolJP[^3]*.ttf'
+FONT_PATTERN=${PREFIX}'PlemolSC[^3]*.ttf'
 
 xAvgCharWidth35_SETVAL=1000
-FONT35_PATTERN=${PREFIX}'PlemolJP35*.ttf'
+FONT35_PATTERN=${PREFIX}'PlemolSC35*.ttf'
 
 for P in ${BASE_DIR}/${FONT_PATTERN}; do
   ttx -t OS/2 -t post "$P"
